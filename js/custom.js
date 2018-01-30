@@ -63,10 +63,10 @@ $(document).ready(function() {
   function initParallax() {
     $('#home').parallax("100%", 0.1);
     $('#about').parallax("100%", 0.3);
-    $('#trainer').parallax("100%", 0.2);
-    $('#newsletter').parallax("100%", 0.3);
+    $('#sponsors').parallax("100%", 0.2);
+    $('#contact').parallax("100%", 0.3);
     $('#blog').parallax("100%", 0.1);
-    $('#price').parallax("100%", 0.2);
+    $('#facebook').parallax("100%", 0.2);
     $('#testimonial').parallax("100%", 0.2);
 
   }

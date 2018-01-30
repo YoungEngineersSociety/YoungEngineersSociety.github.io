@@ -35,10 +35,10 @@ h2 {
   text-transform: uppercase;
 }
 
-#trainer h2,
-#newsletter h2,
+#sponsors h2,
+#contact h2,
 #blog h2,
-#price h2 {
+#facebook h2 {
   padding-bottom: 2px;
     color: #26253a;
 }
@@ -74,17 +74,17 @@ a {
 /*---------------------------------------
     General
 -----------------------------------------*/
-#trainer,
+#sponsors,
 #blog,
-#price {
+#facebook {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
 
 #home,
-#trainer,
-#newsletter,
-#price,
+#sponsors,
+#contact,
+#facebook,
 #testimonial,
 #blog-header {
   text-align: center;
@@ -269,18 +269,18 @@ a {
 /*---------------------------------------
    Overview  section
 -----------------------------------------*/
-#overview {
+#about {
   padding-top: 14rem;
   padding-bottom: 20rem;
   position: relative;
 }
 
-#overview img {
+#about img {
   border: 4px solid #f9f9f9;
   padding: 20px 20px 40px 20px;
 }
 
-#overview blockquote {
+#about blockquote {
   background: #ffffff;
   box-shadow: 0px 2px 8px 10px rgba(50, 50, 50, 0.04);
   border-left: 8px solid #26253a;
@@ -293,12 +293,12 @@ a {
   padding: 62px 52px;
 }
 
-#overview .overview-detail {
+#about .overview-detail {
   position: relative;
   top: 40px;
 }
 
-#overview .btn {
+#about .btn {
   background: transparent;
   border: 4px solid #26253a;
   border-radius: 0px;
@@ -311,7 +311,7 @@ a {
   margin-top: 32px;
 }
 
-#overview .btn:hover {
+#about .btn:hover {
   background: #26253a;
   color: #ffffff;
 }
@@ -321,28 +321,28 @@ a {
 /*---------------------------------------
    Sponsor section
 -----------------------------------------*/
-#trainer {
+#sponsors {
   background: #f9f9f9;
 }
 
-#trainer h3 {
+#sponsors h3 {
     letter-spacing: 1px;
     margin-top: 0px;
     padding-bottom: 12px;
 }
 
-#trainer img {
+#sponsors img {
   width: 100%;
 }
 
-#trainer .trainer-thumb {
+#sponsors .sponsors-thumb {
   position: relative;
   margin-top: 72px;
   margin-bottom: 32px;
   padding: 0px;
 }
 
-#trainer .trainer-thumb .trainer-overlay {
+#sponsors .sponsors-thumb .sponsors-overlay {
   background: #26253a;
   color: #ffffff;
   position: absolute;
@@ -358,16 +358,16 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
-#trainer .trainer-thumb:hover .trainer-overlay {
+#sponsors .sponsors-thumb:hover .sponsors-overlay {
   opacity: 0.9;
   transform: scale(0.9);
 }
 
-#trainer .trainer-thumb .trainer-overlay h2 {
+#sponsors .sponsors-thumb .sponsors-overlay h2 {
   padding-bottom: 0px;
 }
 
-#trainer .trainer-thumb .trainer-des {
+#sponsors .sponsors-thumb .sponsors-des {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -379,9 +379,9 @@ a {
 
 
 /*---------------------------------------
-   Newsletter section
+   contact section
 -----------------------------------------*/
-#newsletter {
+#contact {
     background-size: cover;
     background-position: center center;
     background: #f9f9f9;;
@@ -389,11 +389,11 @@ a {
     padding-bottom: 12rem;
 }
 
-#newsletter .newsletter_detail {
+#contact .contact_detail {
   padding-top: 3rem;
 }
 
-#newsletter .form-control {
+#contact .form-control {
   background: transparent;
   border: none;
   border-bottom: 1px solid #999;
@@ -404,15 +404,15 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
-#newsletter .form-control:focus {
+#contact .form-control:focus {
   border-bottom-color: #ffffff;
 }
 
-#newsletter input {
+#contact input {
   height: 45px;
 }
 
-#newsletter input[type="submit"] {
+#contact input[type="submit"] {
   background: #26253a;
   border: none;
   color: #ffffff;
@@ -424,28 +424,28 @@ a {
   transition: all 0.4s ease-in-out;
 }
 
-#newsletter input[type="submit"]:hover {
+#contact input[type="submit"]:hover {
   background: #ffffff;
   color: #26253a;
 }
 
-#newsletter .max-width {
+#contact .max-width {
     width: 100%;
 }
 
 
 
 /*---------------------------------------
-    Price section
+    facebook section
 -----------------------------------------*/
-#price {
+#facebook {
     background-color: white;
     -webkit-background-size: cover;
     background-size: cover;
     color: #ffffff;
 }
 
-#price .pricing__item {
+#facebook .pricing__item {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -458,21 +458,21 @@ a {
   flex: 0 1 330px;
 }
 
-#price .pricing__feature-list {
+#facebook .pricing__feature-list {
   text-align: left;
 }
 
-#price .pricing__action {
+#facebook .pricing__action {
   color: inherit;
   border: none;
   background: none;
 }
 
-#price .pricing__action:focus {
+#facebook .pricing__action:focus {
   outline: none;
 }
 
-#price .pricing__item {
+#facebook .pricing__item {
   font-size: 20px;
   margin-top: 72px;
   padding: 2em;
@@ -483,25 +483,25 @@ a {
   transition: background-color 0.6s, color 0.3s;
 }
 
-#price .pricing__item:nth-child(2) {
+#facebook .pricing__item:nth-child(2) {
   border-right: none;
   border-left: none;
 }
 
-#price .pricing__item:hover {
+#facebook .pricing__item:hover {
   color: #444;
   background: #ffffff;
   border-color: transparent;
 }
 
-#price .pricing__title {
+#facebook .pricing__title {
   font-size: 2em;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-#price .pricing__price {
+#facebook .pricing__facebook {
   font-size: 1.45em;
   font-weight: bold;
   line-height: 120px;
@@ -514,20 +514,20 @@ a {
   transition: color 0.3s, background 0.3s;
 }
 
-#price .pricing__item:first-child .pricing__price {
+#facebook .pricing__item:first-child .pricing__facebook {
   background: #26253a;
 }
 
-#price .pricing__item:nth-child(2) .pricing__price {
+#facebook .pricing__item:nth-child(2) .pricing__facebook {
   background: #26253a;
 }
 
-#price .pricing__item:hover .pricing__price {
+#facebook .pricing__item:hover .pricing__facebook {
   color: #fff;
   background: #222;
 }
 
-#price .pricing__feature-list {
+#facebook .pricing__feature-list {
   margin: 0;
   padding: 1em 1em 2em 1em;
   font-weight: bold;
@@ -537,7 +537,7 @@ a {
   text-align: center;
 }
 
-#price .pricing__action {
+#facebook .pricing__action {
   font-weight: bold;
   margin-top: auto;
   padding: 18px 48px;
@@ -553,24 +553,24 @@ a {
   transform: translate3d(0, -15px, 0);
 }
 
-#price .pricing__item:hover .pricing__action {
+#facebook .pricing__item:hover .pricing__action {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-#price .pricing__action:hover,
-#price .pricing__action:focus {
+#facebook .pricing__action:hover,
+#facebook .pricing__action:focus {
   background: #222;
 }
 
 @media screen and (max-width: 60em) {
-  #price .pricing__item {
+  #facebook .pricing__item {
     max-width: none;
     width: 100%;
     flex: none;
   }
-  #price .pricing__item:nth-child(2) {
+  #facebook .pricing__item:nth-child(2) {
     border: 1px solid #fff;
   }
 }
@@ -665,14 +665,14 @@ footer .copyright-text {
     height: 65vh;
   }
 
-  #overview {text-align: center;}
+  #about {text-align: center;}
 
-  #overview blockquote {
+  #about blockquote {
     top: 260px;
     padding: 82px;
   }
 
-  #overview .overview-detail {
+  #about .overview-detail {
     margin-left: 20px;
     top: 72px;
   }
@@ -684,17 +684,23 @@ footer .copyright-text {
   #blog-header {
     height: 40vh;
   }
-
+	
+	
 }
 
 
 @media (max-width: 768px) {
 
-  #overview blockquote {
+  #about blockquote {
     top: 306px;
     left: 30px;
     right: 10px;
   }
+	.logo{
+		height: 60px;
+		width: 150px;		
+	}
+
 
 }
 
@@ -710,18 +716,17 @@ footer .copyright-text {
     line-height: 18px;
   }
 
-  #trainer,
+  #sponsors,
   #blog,
-  #price {
+  #facebook {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 
-  #overview {
+  #about {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-
 }
 
 
@@ -752,16 +757,16 @@ footer .copyright-text {
 
   p {font-size: 17px;}
 
-  #overview img {
+  #about img {
     margin-bottom: -60px;
   }
 
-  #overview .overview-detail {
+  #about .overview-detail {
     margin-top: 100px;
     top: 0px;
   }
 
-  #price .pricing__action {
+  #facebook .pricing__action {
     font-size: 13px;
   }
 
@@ -772,30 +777,36 @@ footer .copyright-text {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+	
 
 }
 
 
 @media (max-width: 650px) {
 
-  #overview blockquote {
+  #about blockquote {
     position: relative;
     top: 0px;
     left: 0px;
   }
-
+	
+	.logo{
+		height: 40px;		
+	}
+	
 }
 
 
 @media (max-width: 450px) {
 
-  #overview blockquote {
+  #about blockquote {
     padding: 32px;
   }
 
-  #overview .overview-detail {
+  #about .overview-detail {
     margin-top: 32px;
   }
+	
 
 }
 
