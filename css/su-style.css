@@ -1,0 +1,156 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px;
+  background-color: #fdfdfd;
+  background-image: url("../images/background.png");
+  background-size: 30%;
+}
+
+h1 {
+  padding: 0 0 0.5em 0;
+  font-size: 2.5em;
+}
+
+.window {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4em 0 4em 0;
+}
+
+.main {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  background-color: #fdfdfd;
+  padding: 2em 7% 4em 7%;
+  width: 40%;
+  border: solid 0.5em #f1a74a;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+label {
+  display: block;
+}
+
+label, a {
+  cursor: inherit;
+}
+
+.input {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+input {
+  cursor: pointer;
+}
+
+.radioButtons, .buttons{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+.radioButtons div, .buttons a, .buttons div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  cursor: pointer;
+}
+
+.radioButtons div:first-child label, .buttons a:first-child {
+  border-left: none;
+}
+
+.radioButtons div:last-child label, .buttons a:last-child {
+  border-right: none;
+}
+
+input[type=radio] {
+  opacity: 50;
+  position: relative;
+  left: 50%;
+  top: 2em;
+  height: 1px;
+  margin: 0;
+  float: left;
+}
+
+input[type=radio] + label {
+  background-color: #f0f0f0;
+  border-left: 0.5px solid #fdfdfd;
+  border-right: 0.5px solid #fdfdfd;
+  padding: 10;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.input label {
+  padding-bottom: 0.2em;
+}
+
+input[type=radio]:checked + label {
+  background-image: none;
+  background-color: #f1a74a;
+}
+
+input[type=text], input[type=email], input[type=number], select{
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 1em;
+  border: none;
+  font-size: 0.8em;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  display: none;
+}
+
+input, option, .button {
+  background-color: #f0f0f0;
+}
+
+.button {
+  padding: 10;
+  border-left: 0.5px solid #fdfdfd;
+  border-right: 0.5px solid #fdfdfd;
+  text-align: center;
+  font-size: 0.8em;
+  font-color: #000;
+  text-decoration: none;
+}
+
+.buttons {
+  margin-top: 4em;
+}
+
+.button:visited {
+  color: #000;
+}
+
+.mainAction {
+  background-color: #f1a74a;
+  font-weight: bold;
+}
