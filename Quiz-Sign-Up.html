@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>YES Quiz Night sign-up</title>
+    <link rel="stylesheet" href="css/su-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  </head>
+  <body style="background-image: url('./images/gymRatsYogaBrats.png'); background-size: 40%;">
+    <div class="window">
+      <div class="main" style="border-style: none;">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank-you.html';}"></iframe>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdjT_vXPAtAJQAXhfJwOugHlzj53Gh1kDsjjvUC1tc_KLvamg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <img src="images/title.png" class="logo">
+        <p>Register your team for the YES Quiz Night to secure your spot and to choose your own pizzas. Extra pizza will be available on the night.</p>
+	<p>Come in your best workout gear</p>
+        
+	<div class="input">
+          <label>Team Name</label>
+          <input type="text" id="TeamName" name="entry.604946648" required>
+        </div>
+
+	<div class="input">
+          <label>Team Members (4-6)</label>
+          <textarea type="textarea" id="TeamMembers" name="entry.589745722" required></textarea>
+        </div>
+
+        <div class="input">
+          <label>First pizza</label>
+
+          <select id="pizza" name="entry.154267768" required>
+            <option value="Hawaian">Hawaian</option>
+            <option value="Cheesy Garlic">Cheesy Garlic</option>
+            <option value="Beef and Onion">Beef and Onion</option>
+            <option value="Vegetarian Trio">Vegetarian Trio</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Garlic Bread">Garlic Bread</option>
+          </select>
+        </div>
+
+	<div class="input">
+          <label>Second pizza</label>
+
+          <select id="pizza" name="entry.1724153143" required>
+            <option value="Hawaian">Hawaian</option>
+            <option value="Cheesy Garlic">Cheesy Garlic</option>
+            <option value="Beef and Onion">Beef and Onion</option>
+            <option value="Vegetarian Trio">Vegetarian Trio</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Garlic Bread">Garlic Bread</option>
+          </select>
+        </div>
+
+	<div class="input">
+          <label>Special Dietary Requirements</label>
+          <textarea type="textarea" id="TeamMembers" name="entry.1244320765"></textarea>
+        </div>
+
+        <div class="buttons">
+          <div>
+            <input type="submit" id="submit" action="">
+            <label for="submit" class="button mainAction">Sign-up!</label>
+          </div>
+            <div>
+              <input type="reset" id="reset">
+              <label for="reset" class="button">Cancel</label>
+            </div>
+        </div>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -116,7 +116,7 @@ input[type=radio]:checked + label {
   background-color: #f1a74a;
 }
 
-input[type=text], input[type=email], input[type=number], select{
+input[type=text], input[type=email], input[type=number], select, textarea {
   padding: 0.5em;
   width: 100%;
   border-radius: 1em;
@@ -128,7 +128,7 @@ input[type="button"], input[type="submit"], input[type="reset"] {
   display: none;
 }
 
-input, option, .button {
+input, option, .button, textarea  {
   background-color: #f0f0f0;
 }
 
@@ -153,4 +153,7 @@ input, option, .button {
 .mainAction {
   background-color: #f1a74a;
   font-weight: bold;
+}
+textarea {
+  height: 100px;
 }
