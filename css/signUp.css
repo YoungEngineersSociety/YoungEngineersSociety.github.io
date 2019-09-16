@@ -1,18 +1,18 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
   padding: 0px;
   margin: 0px;
   font-size: 15px;
-  background-color: #fdfdfd;
-  background-image: url("../images/background.png");
-  background-size: 30%;
 }
 
 h1 {
   padding: 0 0 0.5em 0;
   font-size: 2.5em;
+}
+
+#hidden_iframe {
+  display:none;
 }
 
 .window {
@@ -34,10 +34,8 @@ h1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
-  background-color: #fdfdfd;
   padding: 2em 7% 4em 7%;
   width: 40%;
-  border: solid 0.5em #f1a74a;
 }
 
 .logo {
@@ -99,9 +97,8 @@ input[type=radio] {
 }
 
 input[type=radio] + label {
-  background-color: #f0f0f0;
-  border-left: 0.5px solid #fdfdfd;
-  border-right: 0.5px solid #fdfdfd;
+  border-left: 0.5px solid;
+  border-right: 0.5px solid;
   padding: 10;
   text-align: center;
   font-size: 0.8em;
@@ -113,7 +110,6 @@ input[type=radio] + label {
 
 input[type=radio]:checked + label {
   background-image: none;
-  background-color: #f1a74a;
 }
 
 input[type=text], input[type=email], input[type=number], select, textarea {
@@ -128,17 +124,12 @@ input[type="button"], input[type="submit"], input[type="reset"] {
   display: none;
 }
 
-input, option, .button, textarea  {
-  background-color: #f0f0f0;
-}
-
 .button {
   padding: 10;
-  border-left: 0.5px solid #fdfdfd;
-  border-right: 0.5px solid #fdfdfd;
+  border-left: 0.5px solid;
+  border-right: 0.5px solid;
   text-align: center;
   font-size: 0.8em;
-  font-color: #000;
   text-decoration: none;
 }
 
@@ -146,14 +137,10 @@ input, option, .button, textarea  {
   margin-top: 4em;
 }
 
-.button:visited {
-  color: #000;
-}
-
-.mainAction {
-  background-color: #f1a74a;
-  font-weight: bold;
-}
 textarea {
   height: 100px;
+}
+
+.expander .input:last-child {
+  display: none;
 }
