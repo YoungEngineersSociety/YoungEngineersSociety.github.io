@@ -35,7 +35,7 @@ const Form: React.FC<Props> = ({ id }) => {
         setCurrField(schema[0].id);
     }
 
-    var inputData = schema.find((input) => input.id == currField)
+    var inputData = schema.find((input) => input.id === currField)
 
     if (!inputData) {
         inputData = schema[0];
