@@ -1,0 +1,17 @@
+.filterChip input[type="checkbox"] {
+    opacity: 0;
+    width: 16px;
+    margin-right: -16px;
+}
+
+.filterChip label {
+    @apply .rounded .bg-gray-300 .text-gray-600 .py-2 .px-3 .text-base .smallcaps .mr-4;
+}
+
+.filterChip input[type="checkbox"]:checked + label {
+    @apply .bg-orange-light .text-gray-700;
+}
+
+.filterChip input[type="checkbox"]:focus + label {
+    outline: rgb(59, 153, 252) auto 5px;
+}

@@ -1,0 +1,48 @@
+body {
+    @apply .text-gray-900 .leading-loose;
+    font-family: 'Montserrat' !important;
+    font-weight: 700;
+    overflow-x: hidden;
+}
+
+.fill-white {
+    fill: #EE8F1B;
+}
+
+.fill-orange {
+    fill:white;
+}
+
+.primary-gray-900 {
+    --primary: #1a202c;
+}
+
+.primary-gray-700 {
+    --primary: #4a5568;
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
+
+.slider {
+    overflow-x: auto;
+}
+
+.snap {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 10rem;
+}
+
+.slide {
+    scroll-snap-align: start;
+}
+
+.slide:hover {
+    transform: scale(1.01);
+    box-shadow: var(--primary);
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}

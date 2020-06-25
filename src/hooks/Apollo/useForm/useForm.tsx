@@ -1,0 +1,70 @@
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
+import { propOr } from 'ramda';
+
+const HOMEPAGE_QUERY = gql`
+  query Form($id: ItemId) {
+    form(filter: {id: {eq: $id}}) {
+      formName
+      schema
+    }
+  }
+`;
+
+interface Form {
+  formName: string,
+  schema: InputData[]
+}
+
+type Next = string | 'end' | 'next';
+
+export interface InputData {
+  type: 'text' | 'multi',
+  id: string,
+  required: boolean,
+  label: string,
+  help: string | undefined,
+  next: Array<{
+    value: string,
+    next: Next;
+  }>
+}
+
+export interface TextInput extends InputData {
+  type: 'text',
+  prefill: string | undefined
+}
+
+export interface MultiInput extends InputData {
+  type: 'multi',
+  multiType: 'Dest' | 'Route',
+  presentation: 'radio' | 'check' | 'button' | 'buttonGroup' | 'switch' | 'select' | 'list',
+  options: Array<{
+    value: string,
+    label: string
+  }>
+}
+
+const useForm = (id: string) => {
+  const { loading, error, data } = useQuery(HOMEPAGE_QUERY, {variables: {id: id}});
+
+  
+  const formData = propOr(
+    null,
+    'form',
+    data
+  ) as Form;
+
+  if(!formData || !formData.formName || !formData.schema) {
+    return {loading, error};
+  }
+
+  return {
+    loading,
+    error,
+    formName: formData.formName,
+    schema: formData.schema
+  }
+}
+
+export default useForm;
