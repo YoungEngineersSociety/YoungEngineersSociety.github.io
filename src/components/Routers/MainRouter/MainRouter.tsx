@@ -1,8 +1,9 @@
 import React from 'react';
 import useRouterPaths from '../../../hooks/Apollo/useRouterPaths/useRouterPaths';
 import Page from '../../pages/Page/Page';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, Router } from 'react-router';
 import Form from '../../pages/Form/Form';
+import history from '../../../utils/History';
 
 const MainRouter: React.FC = () => {
     const { 
@@ -16,10 +17,12 @@ const MainRouter: React.FC = () => {
      const formRoutes = formPaths && formPaths.map((route: {path: string, id: string}) => <Route path={`/${route.path}`}><Form id={route.id} /></Route>)
 
     return (
-        <Switch>
-            {formRoutes}
-            {homepageRoute}
-        </Switch>
+        <Router history={history}>
+            <Switch>
+                {formRoutes}
+                {homepageRoute}
+            </Switch>
+        </Router>
     )
 }
 
