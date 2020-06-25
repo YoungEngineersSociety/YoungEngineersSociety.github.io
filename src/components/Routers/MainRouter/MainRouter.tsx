@@ -14,13 +14,15 @@ const MainRouter: React.FC = () => {
      } = useRouterPaths();
 
     const homepageRoute = homepagePath && <Route to={homepagePath.path}><Page /></Route>
-     const formRoutes = formPaths && formPaths.map((route: {path: string, id: string}) => <Route path={`/${route.path}`}><Form id={route.id} /></Route>)
+    const formRoutes = formPaths && formPaths.map((route: {path: string, id: string}) => <Route path={`/${route.path}`}><Form id={route.id} /></Route>)
+     const defaultRoute = <Route path=""><Page /></Route>;
 
     return (
         <Router history={history}>
             <Switch>
                 {formRoutes}
                 {homepageRoute}
+                {defaultRoute}
             </Switch>
         </Router>
     )
