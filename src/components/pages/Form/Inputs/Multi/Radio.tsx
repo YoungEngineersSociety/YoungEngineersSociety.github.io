@@ -1,29 +1,38 @@
 import React from 'react';
 import { MultiInput } from '../../../../../hooks/Apollo/useForm/useForm';
-import { FormControlLabel, Radio as RadioButton, RadioGroup, FormControl, FormLabel } from '@material-ui/core';
+import { useFormContext } from 'react-hook-form';
 
 interface Props {
-    data: MultiInput
+    data: MultiInput;
 }
 
 const Radio: React.FC<Props> = ({ data }) => {
-    const { id, label, help, required, options } = data;
+    const {
+        register,
+        // errors
+    } = useFormContext();
 
-    const radios = options.map(option =>   <FormControlLabel
-    value={option.value}
-    control={<RadioButton color="primary" />}
-    label={option.label}
-    labelPlacement='end'
-    key={option.value} />)
+    const {
+        id,
+        label,
+        // help,
+        // required,
+        options
+    } = data;
+
+    const radios = options.map((option: {value: string, label: string}) => (
+        <div key={option.value}>
+            <label>{option.label}</label>
+            <input type="radio" id={option.value} name={id} value={option.value} ref={register} />
+        </div>
+    ));
 
     return (
-    <FormControl component="fieldset" id={id}>
-        <FormLabel component="legend">{label}</FormLabel>
-        <RadioGroup>
+        <div>
+            <label>{label}</label>
             {radios}
-        </RadioGroup>
-    </FormControl>
-    )
+        </div>
+    );
 }
 
 export default Radio;

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useForm from '../../../hooks/Apollo/useForm/useForm';
-import Input from './Input';
+import { useForm as useFormHook, FormContext } from "react-hook-form";
+import InputFactory from './Inputs/InputFactory';
 
 interface Props {
     id: string;
@@ -14,38 +15,23 @@ const Form: React.FC<Props> = ({ id }) => {
         schema
     } = useForm(id);
 
-    const [currField, setCurrField] = useState<string | null>(null);
-    const [lastField, setLastField] = useState<string | null>(null);
-    const state = {
-        curr: {
-            value: currField,
-            set: setCurrField
-        },
-        last: {
-            value: lastField,
-            set: setLastField
-        }
-    }
+    const methods = useFormHook();
 
     if(loading || error || !formName || !schema || schema.length < 1) {
         return <>error</>
     }
 
-    if (currField === null) {
-        setCurrField(schema[0].id);
-    }
+    const onSubmit = (data: any) => console.log(data);
 
-    var inputData = schema.find((input) => input.id === currField)
-
-    if (!inputData) {
-        inputData = schema[0];
-    }
+    console.log(schema);
 
     return <div>
         <h1>{formName}</h1>
-        <form>
-            <Input data={inputData} state={state} />
-        </form>
+        <FormContext {...methods}>
+            <form onSubmit={methods.handleSubmit(onSubmit)}>
+                {schema.map(input => <InputFactory data={input} />)}
+            </form>
+        </FormContext>
     </div>
 }
 

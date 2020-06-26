@@ -1,24 +1,38 @@
 import React from 'react';
 import { MultiInput } from '../../../../../hooks/Apollo/useForm/useForm';
-import { FormGroup, FormControlLabel, Checkbox as MaterialCheckbox, FormLabel } from '@material-ui/core';
+import { useFormContext } from 'react-hook-form';
 
 interface Props {
-    data: MultiInput
+    data: MultiInput;
 }
 
 const Checkbox: React.FC<Props> = ({ data }) => {
-    const { id, label, help, required, options } = data;
+    const {
+        register,
+        // errors
+    } = useFormContext();
 
-    const checks = options.map(option =>   <FormControlLabel
-    value={option.value}
-    control={<MaterialCheckbox color="primary" />}
-    label={option.label}
-    labelPlacement='end' />)
+    const {
+        // id,
+        label,
+        // help,
+        // required,
+        options
+    } = data;
 
-    return <FormGroup id={id}>
-        <FormLabel component="legend">{label}</FormLabel>
-        {checks}
-    </FormGroup>
+    const checks = options.map((option: {value: string, label: string}) => (
+        <div key={option.value}>
+            <label>{option.label}</label>
+            <input type="checkbox" id={option.value} value={option.value} ref={register} />
+        </div>
+    ));
+
+    return (
+        <div>
+            <label>{label}</label>
+            {checks}
+        </div>
+    );
 }
 
 export default Checkbox;
