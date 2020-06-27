@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>YES sign-up</title>
+    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="stylesheet" href="css/Leavers.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="window">
+      <div class="main">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {window.location='DinnerThankYou.html';}"></iframe>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScGSFotyIDjcZ3J9ipBOlCjJHYqPhF9Ob_KdPVUgbqQ8pB0Hw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <img src="images/Dinner.png" class="logo">
+        <p>A 3-course dinner for all of our leaving Engineering students. 
+          Tickets are $25 each for staff and students and $30 each for guests.
+        </p>
+
+        <div class="input">
+          <label>Name</label>
+          <input type="text" id="firstName" name="entry.1206265497" required>
+        </div>
+
+        <div class="input">
+          <label>Email Address</label>
+          <input type="email" id="email" name="entry.490437763" required>
+        </div>
+
+        <div class="expander">
+          <div class="input">
+            <label>Are you student?</label>
+            <div class="radioButtons">
+              <div>
+                <input type="radio" class="show" id="student" name="entry.1555333245" value="Student" required>
+                <label for="student">Student</label>
+              </div>
+              <div>
+                <input type="radio" class="hide" id="staff" name="entry.1555333245" value="Staff">
+                <label for="staff">Staff</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input">
+            <label>Waikato Student ID Number</label>
+            <input type="number" id="idNumber" name="entry.1066081037">
+          </div>
+        </div>
+
+        <div class="expander">
+          <div class="input">
+            <label>Are you bringing a guest?</label>
+            <div class="radioButtons">
+              <div>
+                <input type="radio" class="show" id="yes" name="entry.98332965" value="Yes" required>
+                <label for="yes">Yes</label>
+              </div>
+              <div>
+                <input type="radio" class="hide" id="no" name="entry.98332965" value="No">
+                <label for="no">No</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="input">
+            <label>Guest's Name</label>
+            <input type="text" id="firstName" name="entry.2128513969">
+          </div>
+        </div>
+
+        <div class="input">
+          <label>Special Dietary Requirements</label>
+          <textarea type="textarea" id="TeamMembers" name="entry.1161624711"></textarea>
+        </div>
+
+        <div class="buttons">
+          <div>
+              <input type="submit" id="submit" action="">
+              <label for="submit" class="button mainAction">Reserve tickets</label>
+          </div>
+          <div>
+              <input type="reset" id="reset">
+              <label for="reset" class="button">Cancel</label>
+          </div>
+      </div>
+
+        </form>
+      </div>
+    </div>
+    <script>
+
+      var expanders = document.getElementsByClassName("expander");
+      for(var i = 0; i < expanders.length; i++) {
+        var inputs = expanders[i].children[0].getElementsByTagName("input");
+        var expand = expanders[i].children[1];
+
+        for(var j = 0; j < inputs.length; j++) {
+          inputs[j].addEventListener("click", function() {
+            if(this.checked) {
+              if (this.classList.contains("show")) {
+                this.parentElement.parentElement.parentElement.parentElement.children[1].style.display = "block";
+              } else if (this.classList.contains("hide")){
+                this.parentElement.parentElement.parentElement.parentElement.children[1].style.display = "none";
+              }
+            }
+          });
+        }
+      }
+
+    </script>
+  </body>
+</html>

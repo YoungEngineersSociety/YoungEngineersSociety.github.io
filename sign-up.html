@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>YES sign-up</title>
+    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  </head>
+  <body>
+    <div class="window">
+      <div class="main">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank-you.html';}"></iframe>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdlaKWtlrxmSYVUYWyTr6HtYBa1Us7vP81f7L0uhtcduwEucQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+        <img src="images/YESLogo.png" class="logo">
+        <h1>sign-up</h1>
+        <p>Membership costs $10 and can be paid at our weekly meetings during cultural hour upstairs at LSL</p>
+        <div class="input">
+          <label>Name</label>
+          <input type="text" id="firstName" name="entry.617716527" required>
+        </div>
+
+        <div class="input">
+          <label>Waikato Student ID Number</label>
+          <input type="number" id="idNumber" name="entry.1776030006" required>
+        </div>
+
+        <div class="input">
+          <label>Email Address</label>
+          <input type="email" id="email" name="entry.741884154" required>
+        </div>
+
+        <div class="input">
+          <label>Are you a returning YES member?</label>
+          <div class="radioButtons">
+            <div>
+              <input type="radio" id="yes" name="entry.236108666" value="Yes" required>
+              <label for="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="entry.236108666" value="No">
+              <label for="no">No</label>
+            </div>
+          </div>
+        </div>
+
+<div class="input">
+          <label>Would you like to join Engineering New Zealand?</label>
+          <div class="radioButtons">
+            <div>
+              <input type="radio" id="yesEnz" name="entry.393374597" value="Yes" required>
+              <label for="yesEnz">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="noEnz" name="entry.393374597" value="No">
+              <label for="noEnz">No</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input">
+          <label>What Faculty are you in?</label>
+
+          <select id="faculty" name="entry.1540430521" required>
+            <option value="Faculty of Science and Engineering">Faculty of Science and Engineering</option>
+            <option value="Faculty of Arts and Social Sciences">Faculty of Arts and Social Sciences</option>
+            <option value="Faculty of Computing and Mathematical Sciences">Faculty of Computing and Mathematical Sciences</option>
+            <option value="Te Kura Toi Tangata Faculty of Education">Te Kura Toi Tangata Faculty of Education</option>
+            <option value="Te Huataki Waiora Faculty of Health, Sport and Human Performance">Te Huataki Waiora Faculty of Health, Sport and Human Performance</option>
+            <option value="Te Piringa - Faculty of Law">Te Piringa - Faculty of Law</option>
+            <option value="Te Pua Wananga ki te Ao - Faculty of Maori and Indigenous Studies">Te Pua Wananga ki te Ao - Faculty of Maori and Indigenous Studies</option>
+            <option value="Waikato Management School">Waikato Management School</option>
+            <option value="Waikato Pathways College">Waikato Pathways College</option>
+            <option value="Te Mata Kairangi School of Graduate Research">Te Mata Kairangi School of Graduate Research</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label>What year of your degree are you currently in?</label>
+
+          <div class="radioButtons">
+            <div>
+              <input type="radio" id="first" name="entry.175238502" value="1st year" required>
+              <label for="first">1st year</label>
+            </div>
+
+            <div>
+              <input type="radio" id="second" name="entry.175238502" value="2nd year">
+              <label for="second">2nd year</label>
+            </div>
+
+            <div>
+              <input type="radio" id="third" name="entry.175238502" value="3rd year">
+              <label for="third">3rd year</label>
+            </div>
+
+            <div>
+              <input type="radio" id="fourth" name="entry.175238502" value="4th year">
+              <label for="fourth">4th year</label>
+            </div>
+
+            <div>
+              <input type="radio" id="postGrad" name="entry.175238502" value="Post-grad">
+              <label for="postGrad">Post-grad</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div>
+            <input type="submit" id="submit" action="">
+            <label for="submit" class="button mainAction">Sign-up!</label>
+          </div>
+            <div>
+              <input type="reset" id="reset">
+              <label for="reset" class="button">Cancel</label>
+            </div>
+        </div>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
