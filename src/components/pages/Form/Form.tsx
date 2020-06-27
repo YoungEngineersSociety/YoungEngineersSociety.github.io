@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useForm from '../../../hooks/Apollo/useForm/useForm';
 import { useForm as useFormHook, FormContext } from "react-hook-form";
 import InputFactory from './Inputs/InputFactory';
@@ -16,6 +16,7 @@ const Form: React.FC<Props> = ({ id }) => {
     } = useForm(id);
 
     const methods = useFormHook();
+    const [currentQ, setCurrentQ] = useState<string>('start');
 
     if(loading || error || !formName || !schema || schema.length < 1) {
         return <>error</>
@@ -23,13 +24,11 @@ const Form: React.FC<Props> = ({ id }) => {
 
     const onSubmit = (data: any) => console.log(data);
 
-    console.log(schema);
-
     return <div>
         <h1>{formName}</h1>
         <FormContext {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>
-                {schema.map(input => <InputFactory data={input} />)}
+                {schema.map(input => <><div className={`w-full h-full ${input.id === currentQ? "block" : "hidden"}`}><InputFactory data={input} />{input.next === "end" ? <input type="submit" /> : <button onClick={() => setCurrentQ(input.next)}>continue</button>}</div></>)}
             </form>
         </FormContext>
     </div>

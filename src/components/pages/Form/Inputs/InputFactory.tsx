@@ -4,6 +4,7 @@ import TextField from './Text/Text';
 import CheckboxField from './Multi/Checkbox';
 import RadioField from './Multi/Radio';
 import SelectField from './Multi/Select';
+import ButtonGroup from './Multi/ButtonGroup';
 
 interface Props {
     data: InputData;
@@ -20,6 +21,7 @@ const InputFactory: React.FC<Props> = ({ data }) => {
         case 'select':
             return <SelectField data={data as MultiInput} />;
         case 'buttonGroup':
+            return <ButtonGroup data={data as MultiInput } />
         default:
             return null;
     };

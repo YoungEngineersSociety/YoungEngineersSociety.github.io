@@ -13,7 +13,7 @@ const Checkbox: React.FC<Props> = ({ data }) => {
     } = useFormContext();
 
     const {
-        // id,
+        id,
         label,
         // help,
         // required,
@@ -23,7 +23,7 @@ const Checkbox: React.FC<Props> = ({ data }) => {
     const checks = options.map((option: {value: string, label: string}) => (
         <div key={option.value}>
             <label>{option.label}</label>
-            <input type="checkbox" id={option.value} value={option.value} ref={register} />
+            <input type="checkbox" id={option.value} name={id} value={option.value} ref={register} />
         </div>
     ));
 

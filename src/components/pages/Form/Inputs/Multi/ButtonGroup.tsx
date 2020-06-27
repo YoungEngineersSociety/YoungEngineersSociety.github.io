@@ -7,34 +7,60 @@ interface Props {
 }
 
 const ButtonGroup: React.FC<Props> = ({ data }) => {
-    const { control, errors } = useFormContext();
+    const {
+        control,
+        // errors
+    } = useFormContext();
 
-    const { id, label, help, required, options } = data;
+    const [
+        value,
+        setValue
+    ] = useState<string>('');
+
+    const {
+        id,
+        label,
+        // help,
+        required,
+        options
+    } = data;
 
     return (
         <div>
             <label>{label}</label>
             <Controller
-                as={<ButtonGroupComponent options={options} required={required} />}
-                name={label}
+                as={ButtonGroupComponent}
+                name={id}
+                options={options}
+                required={required}
+                value={value}
+                setValue={setValue}
+                control={control}
+                onChangeName="setValue"
             />
         </div>
     );
 }
 
-const ButtonGroupComponent: React.FC<{options: {value: string, label: string}[], required: boolean}> = ({ options, required }) => {
-    const [selected, setSelected] = useState<string>();
+interface ComponentProps {
+    options: {
+        value: string,
+        label: string
+    }[],
+    required: boolean,
+    value: string,
+    setValue: React.Dispatch<React.SetStateAction<string>>
+}
 
-    const buttons = options.map((option: {value: string, label: string}) => (
-        <div key={option.value} onClick={() => setSelected(option.value)}>
-            {option.label}
-        </div>
-    ));
-
+const ButtonGroupComponent: React.FC<ComponentProps> = ({ options, required, value, setValue }) => {
     return (
-        <div>
-            {buttons}
-        </div>
+        <>
+            { options.map((option: {value: string, label: string}) => (
+                <div className={value === option.value? "text-orange-light" : ""} key={option.value} onClick={() => setValue(option.value)}>
+                    {option.label}
+                </div>
+            ))}
+        </>
     );
 }
 

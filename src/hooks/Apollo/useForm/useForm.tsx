@@ -28,10 +28,7 @@ export interface InputData {
   required: boolean,
   label: string,
   help: string | undefined,
-  next: Array<{
-    value: string,
-    next: Next;
-  }>
+  next: Next;
 }
 
 export interface TextInput extends InputData {

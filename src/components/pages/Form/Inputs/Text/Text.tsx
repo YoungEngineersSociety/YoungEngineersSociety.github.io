@@ -20,6 +20,7 @@ const Text: React.FC<Props> = ({ data }) => {
             type="text"
             required={required}
             id={id}
+            name={id}
             placeholder={help}
             ref={register}
         />
