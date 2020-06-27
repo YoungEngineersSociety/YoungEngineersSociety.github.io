@@ -18,16 +18,17 @@ interface Form {
 
 type Next = string | 'end' | 'next';
 
+type MultiType = 'radio' | 'check' | 'buttonGroup' | 'select';
+
+export type InputType = 'text' | MultiType;
+
 export interface InputData {
-  type: 'text' | 'multi',
+  type: InputType,
   id: string,
   required: boolean,
   label: string,
   help: string | undefined,
-  next: Array<{
-    value: string,
-    next: Next;
-  }>
+  next: Next;
 }
 
 export interface TextInput extends InputData {
@@ -36,9 +37,8 @@ export interface TextInput extends InputData {
 }
 
 export interface MultiInput extends InputData {
-  type: 'multi',
+  type: MultiType,
   multiType: 'Dest' | 'Route',
-  presentation: 'radio' | 'check' | 'button' | 'buttonGroup' | 'switch' | 'select' | 'list',
   options: Array<{
     value: string,
     label: string
